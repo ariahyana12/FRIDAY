@@ -204,15 +204,15 @@ for i, row in enumerate(existing_data):
     if not data_found:  # Check if data was not found for the current row
         print(f"Data untuk toko {toko}, docno {docno}, rtype {rtype} tidak ditemukan.")
 
-# filer = os.listdir(path_result)
+filer = os.listdir(path_result)
 
-# merge = []
-# for csv_merge in filer:
-#     df = pd.read_csv(path_result + csv_merge, sep="|")
-#     merge.append(df)
+merge = []
+for csv_merge in filer:
+    df = pd.read_csv(path_result + csv_merge, sep="|")
+    merge.append(df)
 
-# merged_csv = pd.concat(merge)
-# merged_csv.to_excel("../RES/XLS/wtgab.xlsx", index=False)
+merged_csv = pd.concat(merge)
+merged_csv.to_excel("../RES/XLS/wtgab.xlsx", index=False)
 print("Silahkan Cek Hasil WT Seleksi di Folder Result")
 # open explorer
 relative_path = "../RES/WTR"
