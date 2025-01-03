@@ -218,3 +218,5 @@ print("Silahkan Cek Hasil WT Seleksi di Folder Result")
 relative_path = "../RES/WTR"
 folder_path = os.path.abspath(relative_path)
 os.system(f'explorer "{folder_path}"')
+
+#test commit
